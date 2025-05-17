@@ -33,7 +33,7 @@ We analyzed GRPO under a binary reward setting and uncovered two core insights:
 
 ---
 
-### 📈 Results
+### 📈 Quick Results
 
 On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and its variants**:
 
@@ -41,14 +41,16 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
 * **+6% vs DAPO**
 
 **Table of Contents**
-- [Experimental Results](#experimental-results)
+- [More Results](#experimental-results)
 - [Getting Started](#getting-started)
     - [Environment Setup](#environment-setup)
     - [Training](#training)
     - [Evaluation](#evaluation)
 - [Citing DisCO](#citing-disco)
 
+## More Results
 
+## Getting Started
 
 ## Citing DisCO
 
