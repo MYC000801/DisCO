@@ -44,7 +44,7 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
 * **+7% vs GRPO**
 * **+6% vs DAPO**
 
-**DisCO with 8k response length is on par or even better than GRPO with 32k response length**
+**DisCO with 8k response length is on par with or even better than GRPO with 32k response length**
 
 ---
 
