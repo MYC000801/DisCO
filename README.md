@@ -41,8 +41,9 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
 * **+6% vs DAPO**
 
 ---
+
 **Table of Contents**
-- [More Results](#experimental-results)
+- [More Results](#more-results)
 - [Getting Started](#getting-started)
     - [Environment Setup](#environment-setup)
     - [Training](#training)
