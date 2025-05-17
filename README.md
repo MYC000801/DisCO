@@ -55,7 +55,14 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
 
 ## More Results
 
-<p align="center"><img alt="Comparison with baselines on 1.5B model" src="./assets/1p5model.png" width="400"/></p>
+Comparison with baseline models and baseline methods for fine-tuning 1.5B models. OpenAI-o1-preview is included as a reference.  MRL denotes Max Response Length utilized in training/testing. The shaded models are trained by other works and the shaded numbers are reported in their original works or in DeepScalaR. All other results are either evaluated on existing models or on the models trained by us using  different approaches. Methods in the bottom area are all for fine-tuning  DeepSeek-R1-Distill-Qwen-1.5B model on the same DeepScaleR dataset. DS is short for DeepSeek-R1, DSR is short for DeepScalaR.
+
+<p align="center"><img alt="Comparison with baselines on 1.5B model" src="./assets/1p5model.png" width="800"/></p>
+
+
+Comparison with baseline models and baseline methods for fine-tuning 7B models. Methods in the bottom area are all for fine-tuning  DeepSeek-R1-Distill-Qwen-7B model on the the same DeepScalaR dataset.
+
+<p align="center"><img alt="Comparison with baselines on 7B model" src="./assets/7b.png" width="800"/></p>
 
 
 ## Getting Started
