@@ -43,6 +43,17 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
     - [Environment Setup](#environment-setup)
     - [Training](#training)
     - [Evaluation](#evaluation)
-- [Citing DRRho](#citing-drrho)
+- [Citing DisCO](#citing-disco)
 
+
+
+## Citing DisCO
+
+If you find DisCO useful in your research, please consider citing the following paper:
+```bibtex
+@article{li2025disco,
+  title={DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization},
+  author={Li, Gang and Lin, Ming and Galanti, Tomer and Tu, Zhenzhong and Yang, Tianbao},
+  journal={arXiv preprint arXiv},
+  year={2025}
 
