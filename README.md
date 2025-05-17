@@ -30,7 +30,7 @@ We analyzed GRPO under a binary reward setting and uncovered two core insights:
 ### 🔍 Why DisCO?
 
 * ❌ **No more difficulty bias** – replaces group-relative objective with discriminative objectives
-* 🔄 **No clip operations** – uses non-clipping scoring functions for smoother learning
+* 🔄 **No clipping operations** – uses non-clipping scoring functions for smoother learning
 * 📉 **Stable training** – via simple constrained optimization to keep KL divergence in check
 * ⚖️ **Handles sparse rewards** – robust to imbalanced data with advanced discriminative approaches
 
