@@ -23,7 +23,7 @@ We analyzed GRPO under a binary reward setting and uncovered two core insights:
 
 * ⚡ Faster convergence
 * 🔒 More stable optimization
-* 🔁 Longer-lasting training dynamics for large reasoning models
+* 🔁 Long-lasting training dynamics for large reasoning models
 
 ---
 
