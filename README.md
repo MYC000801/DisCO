@@ -11,9 +11,9 @@ However, GRPO suffers several key limitations including entropy collapse, diffic
 in a principled manner without inheriting the limitations of GRPO?*
 
 
-We analyzed GRPO under a binary reward setting and uncovered two core insights:
+We analyzed GRPO and its variants under a binary reward setting and uncovered two core insights:
 
-* ⚠️ GRPO suffers from **question-level difficulty bias**
+* ⚠️ GRPO suffers from **question-level difficulty bias** for its discriminative objective
 * 🔍 GRPO has a surprising connection to **discriminative learning** techniques, particularly AUC maximization
 
 ---
