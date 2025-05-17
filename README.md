@@ -1,4 +1,7 @@
 <h1 align="center">🚀 DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization</h1>
+<p align="center"><img alt="DisCO" src="./assets/disco.png" width="400"/></p>
+
+
 
 The success of **DeepSeek-R1** has spotlighted **GRPO (Group Relative Policy Optimization)** as a key reinforcement learning method for large reasoning models.
 However, GRPO suffers several key limitations including entropy collapse, difficulty bias, etc. 
