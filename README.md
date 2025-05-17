@@ -55,7 +55,7 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
 
 ## More Results
 
-<p align="center"><img alt="Comparison with baselines on 1.5B model" src="./assets/1p5model.PNG" width="400"/></p>
+<p align="center"><img alt="Comparison with baselines on 1.5B model" src="./assets/1p5model.png" width="400"/></p>
 
 
 ## Getting Started
