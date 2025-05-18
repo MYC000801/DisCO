@@ -1,5 +1,5 @@
 <h1 align="center">🚀 DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization</h1>
-<p align="center"><img alt="DisCO" src="./assets/godisco.png" width="300"/></p>
+<p align="center"><img alt="DisCO" src="./assets/godisco2.webp" width="300"/></p>
 
 Paper link: [arXiv](https://arxiv.org/abs/)
 
