@@ -50,7 +50,8 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
 
 - [More Results](#more-results)
 - [Getting Started](#getting-started)
-    - [Environment Setup](#environment-setup)
+    - [Installation](#installation)
+    - [Datasets](#datasets)
     - [Training](#training)
     - [Evaluation](#evaluation)
 - [Citing DisCO](#citing-disco)
@@ -72,6 +73,84 @@ Training dynamics of different methods: left two are for fine-tuning 1.5B model 
 
 
 ## Getting Started
+### Installation
+```bash
+# Recommend Python 3.10.
+conda create -n disco python=3.10
+conda activate disco
+cd DisCO
+pip install -e ./verl
+pip install -e ./deepscaler
+pip install wandb
+```
+
+### Datasets
+
+Datesets utilized in our training are included in the `datasets` folder. Feel free to adapt  file `scripts/data/deepscaler_dataset.py` to generate your own datasets.
+
+
+
+### Training
+
+We provide training scripts for both single-node and multi-node setups in `scripts/train/`.
+
+#### Single-Node Training (8 GPUs)
+We start with one node for training 1.5b Qwen models with 8k context, with 8 A100-80GB GPUs. For example, let's run DisCO algorithm with `log likelihood` as the score function:
+```bash
+
+./scripts/train/run_disco_logL_1.5b_8k.sh   #### DisCO with `log likelihood`
+# ./scripts/train/run_disco_Lratio_1.5b_8k.sh   #### DisCO with `likelihood ratio`
+# ./scripts/train/run_discob_logL_1.5b_8k.sh    #### DisCO-b with `log likelihood`
+# ./scripts/train/run_discob_Lratio_1.5b_8k.sh  #### DisCO-b with `likelihood ratio`
+```
+
+#### Multi-Node Training
+
+To train with longer context or larger models, multi-node training is necessary. To achieve this, follow these steps:
+
+1. On the head node:
+```bash
+# Set XFormers backend to avoid CUDA errors
+export VLLM_ATTENTION_BACKEND=XFORMERS
+# Start Ray head node
+ray start --head
+```
+
+2. On each worker node:
+```bash
+# Set XFormers backend to avoid CUDA errors
+export VLLM_ATTENTION_BACKEND=XFORMERS
+# Connect to head node (replace with your head node's address)
+ray start --address=[RAY_ADDRESS]
+```
+
+3. Finally, on the head node, run the training script, such as:
+```bash
+./scripts/train/run_disco_logL_7b_8k.sh
+```
+
+
+## Evaluation
+
+Our evaluation scripts automatically runs vLLM to generate 16 samples for each problem. To run our evaluation scripts, run:
+```bash
+./scripts/eval/eval_model.sh --model [CHECKPOINT_PATH] --datasets [DATASET1] [DATASET2] --output-dir [OUTPUT_DIR]
+```
+
+We report Pass@1 accuracy averaged over 16 samples for each problem. To replicate our reported numbers, run:
+<!-- Notably, our `DeepScaleR-1.5B-Preview` surpasses many open-source 7B models!  -->
+
+```bash
+./scripts/eval/eval_model.sh --model deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --datasets aime aime25 math amc minerva olympiad_bench --output-dir ./val_results/DeepSeek-R1-Distill-Qwen-1.5B
+```
+We will release our model soon! Stay tuned!
+
+## Acknowledgements
+- Our training pipeline is built on the Github repository [deepscaler](https://github.com/agentica-project/rllm). We thank the author for opensourcing their code.
+
+
+
+
 
 ## Citing DisCO
 
