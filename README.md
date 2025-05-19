@@ -48,6 +48,7 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
 
 ---
 
+- [Model Checkpoints](#model-checkpoints)
 - [More Results](#more-results)
 - [Getting Started](#getting-started)
     - [Installation](#installation)
@@ -56,6 +57,11 @@ On six math reasoning benchmarks with a 1.5B model, **DisCO outperforms GRPO and
     - [Evaluation](#evaluation)
 - [Citing DisCO](#citing-disco)
 
+
+## Model Checkpoints
+
+- DisCO Algorithm with Log Likelihood as Score Function on 1.5B Model: [DisCO-1.5B-logL](https://huggingface.co/ganglii/DisCO-1.5B-logL)
+- DisCO Algorithm with Likelihood Ratio as Score Function on 1.5B Model: [DisCO-1.5B-Lratio](https://huggingface.co/ganglii/DisCO-1.5B-Lratio)
 ## More Results
 
 Comparison with baseline models and baseline methods for fine-tuning 1.5B models. OpenAI-o1-preview is included as a reference.  MRL denotes Max Response Length utilized in training/testing. The shaded models are trained by other works and the shaded numbers are reported in their original works or in DeepScalaR. All other results are either evaluated on existing models or on the models trained by us using  different approaches. Methods in the bottom area are all for fine-tuning  DeepSeek-R1-Distill-Qwen-1.5B model on the same DeepScaleR dataset. DS is short for DeepSeek-R1, DSR is short for DeepScalaR.
