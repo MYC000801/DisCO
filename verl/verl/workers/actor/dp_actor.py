@@ -248,11 +248,7 @@ class DataParallelPPOActor(BasePPOActor):
                     seq_level_rewards = data['seq_level_rewards']
 
                     clip_ratio = self.config.clip_ratio
-                    clip_ratio_low = self.config.clip_ratio_low
-                    clip_ratio_high = self.config.clip_ratio_high
-                    clip_ratio_c = self.config.clip_ratio_c
                     entropy_coeff = self.config.entropy_coeff
-                    max_num_tokens = self.config.max_num_tokens
                     delta = self.config.delta
                     beta = self.config.beta
                     tau = self.config.tau
