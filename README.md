@@ -146,7 +146,7 @@ We report Pass@1 accuracy averaged over 16 samples for each problem. To replicat
 We will release our model soon! Stay tuned!
 
 ## Acknowledgements
-- Our training pipeline is built on the Github repository [deepscaler](https://github.com/agentica-project/rllm). We thank the author for opensourcing their code.
+- Our training pipeline is built on the Github repository [deepscaler](https://github.com/agentica-project/rllm). We thank the authors for open-sourcing their code.
 
 
 
