@@ -141,7 +141,7 @@ We report Pass@1 accuracy averaged over 16 samples for each problem. To replicat
 <!-- Notably, our `DeepScaleR-1.5B-Preview` surpasses many open-source 7B models!  -->
 
 ```bash
-./scripts/eval/eval_model.sh --model deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B --datasets aime aime25 math amc minerva olympiad_bench --output-dir ./val_results/DeepSeek-R1-Distill-Qwen-1.5B
+./scripts/eval/eval_model.sh --model ganglii/DisCO-1.5B-DeepScaleR --datasets aime aime25 math amc minerva olympiad_bench --output-dir ./val_results/DisCO-1.5B-DeepScaleR
 ```
 We will release our model soon! Stay tuned!
 
