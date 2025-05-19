@@ -98,10 +98,10 @@ We provide training scripts for both single-node and multi-node setups in `scrip
 We start with one node for training 1.5b Qwen models with 8k context, with 8 A100-80GB GPUs. For example, let's run DisCO algorithm with `log likelihood` as the score function:
 ```bash
 
-./scripts/train/run_disco_logL_1.5b_8k.sh   #### DisCO with `log likelihood`
-# ./scripts/train/run_disco_Lratio_1.5b_8k.sh   #### DisCO with `likelihood ratio`
-# ./scripts/train/run_discob_logL_1.5b_8k.sh    #### DisCO-b with `log likelihood`
-# ./scripts/train/run_discob_Lratio_1.5b_8k.sh  #### DisCO-b with `likelihood ratio`
+bash ./scripts/train/run_disco_logL_1.5b_8k.sh   #### DisCO with `log likelihood`
+# bash ./scripts/train/run_disco_Lratio_1.5b_8k.sh   #### DisCO with `likelihood ratio`
+# bash ./scripts/train/run_discob_logL_1.5b_8k.sh    #### DisCO-b with `log likelihood`
+# bash ./scripts/train/run_discob_Lratio_1.5b_8k.sh  #### DisCO-b with `likelihood ratio`
 ```
 
 #### Multi-Node Training
@@ -126,7 +126,7 @@ ray start --address=[RAY_ADDRESS]
 
 3. Finally, on the head node, run the training script, such as:
 ```bash
-./scripts/train/run_disco_logL_7b_8k.sh
+bash ./scripts/train/run_disco_logL_7b_8k.sh
 ```
 
 
