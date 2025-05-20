@@ -148,7 +148,7 @@ We report Pass@1 accuracy averaged over 16 samples for each problem. To replicat
 
 ```bash
 ./scripts/eval/eval_model.sh --model ganglii/DisCO-1.5B-logL --datasets aime aime25 math amc minerva olympiad_bench --output-dir ./val_results/DisCO-1.5B-logL
-
+```
 
 ## Acknowledgements
 - Our training pipeline is built on the Github repository [deepscaler](https://github.com/agentica-project/rllm). We thank the authors for open-sourcing their code.
