@@ -4,7 +4,6 @@ set -x
 # Warning: Export VLLM_ATTENTION_BACKEND on every machine before starting Ray cluster.
 # vLLM without XFORMERS will results in CUDA errors.
 export VLLM_ATTENTION_BACKEND=XFORMERS
-export WANDB_API_KEY=abb4f1c98481500ffec13bbd11e492897ccd8c17
 
 MODEL_PATH="deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
 # Train over a single node, 8 A100-80GB GPUs.
