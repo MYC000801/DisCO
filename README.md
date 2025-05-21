@@ -24,7 +24,7 @@ We analyzed GRPO and its variants (Dr. GRPO, DAPO, etc) under a binary reward se
 
 * ⚡ Faster convergence
 * 🔒 More stable optimization
-* 🔁 Long-lasting training dynamics for large reasoning models
+* 🔁 Long-lasting training dynamics
 
 ---
 
