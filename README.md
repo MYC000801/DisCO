@@ -167,8 +167,9 @@ If you find DisCO useful in your research, please consider citing the following 
 ```bibtex
 @article{li2025disco,
   title={DisCO: Reinforcing Large Reasoning Models with Discriminative Constrained Optimization},
-  author={Li, Gang and Lin, Ming and Galanti, Tomer and Tu, Zhenzhong and Yang, Tianbao},
+  author={Li, Gang and Lin, Ming and Galanti, Tomer and Tu, Zhengzhong and Yang, Tianbao},
   journal={arXiv preprint arXiv:2505.12366},
   year={2025}
+}
 ```
 
