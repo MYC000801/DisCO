@@ -1,0 +1,29 @@
+Using LocalLogger is deprecated. The constructor API will change
+Total training steps: 129
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+step:0 - train/loss:1.653 - train/lr(1e-3):0.001
+step:1 - train/loss:1.666 - train/lr(1e-3):0.002
+step:2 - train/loss:1.675 - train/lr(1e-3):0.003
+step:3 - train/loss:1.581 - train/lr(1e-3):0.003
+step:4 - train/loss:1.346 - train/lr(1e-3):0.004
+step:5 - train/loss:0.634 - train/lr(1e-3):0.005
+step:6 - train/loss:0.466 - train/lr(1e-3):0.006
+step:7 - train/loss:0.276 - train/lr(1e-3):0.007
+step:8 - train/loss:0.256 - train/lr(1e-3):0.008
+step:9 - train/loss:0.229 - train/lr(1e-3):0.008
+step:10 - train/loss:0.168 - train/lr(1e-3):0.009
+step:11 - train/loss:0.122 - train/lr(1e-3):0.010
+step:12 - train/loss:0.099 - train/lr(1e-3):0.010
+step:13 - train/loss:0.082 - train/lr(1e-3):0.010
+step:14 - train/loss:0.089 - train/lr(1e-3):0.010
+step:15 - train/loss:0.066 - train/lr(1e-3):0.010
+step:16 - train/loss:0.051 - train/lr(1e-3):0.010
+step:17 - train/loss:0.080 - train/lr(1e-3):0.010
+step:18 - train/loss:0.059 - train/lr(1e-3):0.010
+step:19 - train/loss:0.053 - train/lr(1e-3):0.010
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:689: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+step:20 - train/loss:0.049 - train/lr(1e-3):0.010

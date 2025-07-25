@@ -1,0 +1,7 @@
+{"time":"2025-07-22T22:16:55.225839904-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250722_221655-0bzxmi0i/logs/debug-core.log"}
+{"time":"2025-07-22T22:16:55.412986464-04:00","level":"INFO","msg":"created new stream","id":"0bzxmi0i"}
+{"time":"2025-07-22T22:16:55.413013703-04:00","level":"INFO","msg":"stream: started","id":"0bzxmi0i"}
+{"time":"2025-07-22T22:16:55.413024584-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"0bzxmi0i"}
+{"time":"2025-07-22T22:16:55.413029672-04:00","level":"INFO","msg":"sender: started","stream_id":"0bzxmi0i"}
+{"time":"2025-07-22T22:16:55.413050381-04:00","level":"INFO","msg":"handler: started","stream_id":"0bzxmi0i"}
+{"time":"2025-07-22T22:16:55.606254871-04:00","level":"INFO","msg":"stream: closing","id":"0bzxmi0i"}

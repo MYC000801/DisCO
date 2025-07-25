@@ -199,6 +199,32 @@ def allgather_dict_tensors(tensors: Union[Dict[str, torch.Tensor], TensorDict], 
 
     return output
 
+def build_loss_mask(input_ids, im_start, im_end, assistant_id):
+    """
+    Return a 0/1 bool mask (same length) whose 1s mark the *positions*
+    whose next‑token labels should be included in loss.
+    """
+    mask = torch.zeros_like(input_ids, dtype=torch.bool)
+    i, L = 0, input_ids.size(0)
+
+    while i < L - 1:                         # 至少还剩 2 个 token 可检查
+        # 找 "<|im_start|> assistant"
+        if input_ids[i] == im_start and input_ids[i + 1] == assistant_id:
+            # assistant 内容从 i+2 开始，到 j-1 结束
+            j = i + 2
+            while j < L and input_ids[j] != im_end:
+                j += 1
+            start = max(i + 2, 0)            # user 最后 token
+            end   = j                    # assistant 最后内容 token
+            mask[start:end] = True           # 左闭右开
+            i = j + 1                        # 跳过 <im_end>
+        else:
+            i += 1
+
+    # 最后一 token 永远无 label → 不计
+    mask[-1] = False
+    return mask
+
 
 def split_dict_tensor_into_batches(tensors: TensorDict, batch_size) -> List[TensorDict]:
     assert tensors.batch_size[0] % batch_size == 0, \

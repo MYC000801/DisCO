@@ -1,0 +1,15 @@
+{"time":"2025-07-22T15:23:11.591189312-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250722_152311-t7rxjp4k/logs/debug-core.log"}
+{"time":"2025-07-22T15:23:11.77909763-04:00","level":"INFO","msg":"created new stream","id":"t7rxjp4k"}
+{"time":"2025-07-22T15:23:11.779127428-04:00","level":"INFO","msg":"stream: started","id":"t7rxjp4k"}
+{"time":"2025-07-22T15:23:11.77914433-04:00","level":"INFO","msg":"handler: started","stream_id":"t7rxjp4k"}
+{"time":"2025-07-22T15:23:11.779141695-04:00","level":"INFO","msg":"sender: started","stream_id":"t7rxjp4k"}
+{"time":"2025-07-22T15:23:11.779173871-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"t7rxjp4k"}
+{"time":"2025-07-22T15:23:11.95619692-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-22T16:57:51.872226492-04:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/it-is-reasoning/maze-sft/t7rxjp4k/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-07-22T17:02:27.208475135-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-22T17:08:12.210343777-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-22T17:08:38.569318182-04:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/it-is-reasoning/maze-sft/t7rxjp4k/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-07-22T17:08:44.477512094-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-22T17:09:09.482646291-04:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"context deadline exceeded\",\"path\":[\"project\",\"run\"]}],\"data\":{\"project\":{\"run\":null}}}"}
+{"time":"2025-07-22T17:21:42.215273814-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-22T17:33:57.220406719-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}

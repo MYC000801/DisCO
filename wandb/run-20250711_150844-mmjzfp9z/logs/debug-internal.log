@@ -1,0 +1,8 @@
+{"time":"2025-07-11T15:08:44.962888035-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250711_150844-mmjzfp9z/logs/debug-core.log"}
+{"time":"2025-07-11T15:08:45.173919739-04:00","level":"INFO","msg":"created new stream","id":"mmjzfp9z"}
+{"time":"2025-07-11T15:08:45.173956118-04:00","level":"INFO","msg":"stream: started","id":"mmjzfp9z"}
+{"time":"2025-07-11T15:08:45.173965997-04:00","level":"INFO","msg":"sender: started","stream_id":"mmjzfp9z"}
+{"time":"2025-07-11T15:08:45.173971056-04:00","level":"INFO","msg":"handler: started","stream_id":"mmjzfp9z"}
+{"time":"2025-07-11T15:08:45.173990643-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"mmjzfp9z"}
+{"time":"2025-07-11T15:08:45.375068459-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-11T16:05:30.792502037-04:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/it-is-reasoning/DisCO/mmjzfp9z/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}

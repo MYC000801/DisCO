@@ -1,0 +1,7 @@
+{"time":"2025-07-10T13:35:21.797602696-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250710_133521-tyhqrorx/logs/debug-core.log"}
+{"time":"2025-07-10T13:35:22.013953444-04:00","level":"INFO","msg":"created new stream","id":"tyhqrorx"}
+{"time":"2025-07-10T13:35:22.013994111-04:00","level":"INFO","msg":"stream: started","id":"tyhqrorx"}
+{"time":"2025-07-10T13:35:22.014019228-04:00","level":"INFO","msg":"sender: started","stream_id":"tyhqrorx"}
+{"time":"2025-07-10T13:35:22.014046189-04:00","level":"INFO","msg":"handler: started","stream_id":"tyhqrorx"}
+{"time":"2025-07-10T13:35:22.014033044-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"tyhqrorx"}
+{"time":"2025-07-10T13:35:22.319655751-04:00","level":"INFO","msg":"Starting system monitor"}

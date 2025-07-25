@@ -1,0 +1,7 @@
+{"time":"2025-05-26T23:48:28.830839975-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250526_234828-iclmvgfb/logs/debug-core.log"}
+{"time":"2025-05-26T23:48:29.008264501-04:00","level":"INFO","msg":"created new stream","id":"iclmvgfb"}
+{"time":"2025-05-26T23:48:29.008287404-04:00","level":"INFO","msg":"stream: started","id":"iclmvgfb"}
+{"time":"2025-05-26T23:48:29.008307413-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"iclmvgfb"}
+{"time":"2025-05-26T23:48:29.008316357-04:00","level":"INFO","msg":"sender: started","stream_id":"iclmvgfb"}
+{"time":"2025-05-26T23:48:29.008314751-04:00","level":"INFO","msg":"handler: started","stream_id":"iclmvgfb"}
+{"time":"2025-05-26T23:48:29.149470332-04:00","level":"INFO","msg":"Starting system monitor"}

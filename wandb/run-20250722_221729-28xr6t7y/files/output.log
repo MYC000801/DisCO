@@ -1,0 +1,26 @@
+Using LocalLogger is deprecated. The constructor API will change
+Total training steps: 129
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+step:0 - train/loss:1.653 - train/lr(1e-3):0.001
+Error executing job with overrides: ['data.train_files=/projectnb/rlhf/mingyuc/DisCO/datasets/maze/train_new.parquet', 'data.val_files=/projectnb/rlhf/mingyuc/DisCO/datasets/maze/test_new.parquet', 'data.prompt_key=extra_info', 'data.response_key=extra_info', '+data.prompt_dict_keys=[question]', '+data.response_dict_keys=[answer]', 'data.micro_batch_size=8', 'model.partial_pretrain=Qwen/Qwen2.5-1.5B', 'trainer.default_local_dir=./exp/qwen_1.5b', 'trainer.project_name=math-sft', 'trainer.experiment_name=maze-sft-qwen-1.5b-it', 'trainer.total_epochs=1', 'trainer.logger=[wandb,console]', 'trainer.default_hdfs_dir=null']
+Traceback (most recent call last):
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 392, in main
+    trainer.fit()
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 339, in fit
+    metric = self.training_step(data)
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 265, in training_step
+    loss = self._compute_loss(batch=micro_batch) / n_micro_batches
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 238, in _compute_loss
+    loss = loss_fct(shift_logits, shift_labels)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 1188, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/functional.py", line 3104, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 9.27 GiB. GPU 0 has a total capacity of 44.40 GiB of which 6.25 GiB is free. Including non-PyTorch memory, this process has 38.14 GiB memory in use. Of the allocated memory 30.69 GiB is allocated by PyTorch, and 6.80 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

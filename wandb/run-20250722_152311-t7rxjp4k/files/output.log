@@ -1,0 +1,200 @@
+Using LocalLogger is deprecated. The constructor API will change
+Total training steps: 390
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+step:0 - train/loss:2.896 - train/lr(1e-3):0.000
+step:1 - train/loss:2.914 - train/lr(1e-3):0.001
+step:2 - train/loss:2.903 - train/lr(1e-3):0.001
+step:3 - train/loss:2.919 - train/lr(1e-3):0.001
+step:4 - train/loss:2.893 - train/lr(1e-3):0.001
+step:5 - train/loss:2.831 - train/lr(1e-3):0.002
+step:6 - train/loss:2.638 - train/lr(1e-3):0.002
+step:7 - train/loss:2.614 - train/lr(1e-3):0.002
+step:8 - train/loss:2.557 - train/lr(1e-3):0.002
+step:9 - train/loss:2.198 - train/lr(1e-3):0.003
+step:10 - train/loss:2.144 - train/lr(1e-3):0.003
+step:11 - train/loss:2.112 - train/lr(1e-3):0.003
+step:12 - train/loss:1.782 - train/lr(1e-3):0.003
+step:13 - train/loss:1.755 - train/lr(1e-3):0.004
+step:14 - train/loss:1.712 - train/lr(1e-3):0.004
+step:15 - train/loss:1.674 - train/lr(1e-3):0.004
+step:16 - train/loss:1.553 - train/lr(1e-3):0.004
+step:17 - train/loss:1.436 - train/lr(1e-3):0.005
+step:18 - train/loss:1.412 - train/lr(1e-3):0.005
+step:19 - train/loss:1.396 - train/lr(1e-3):0.005
+step:20 - train/loss:1.367 - train/lr(1e-3):0.005
+step:21 - train/loss:1.338 - train/lr(1e-3):0.006
+step:22 - train/loss:1.319 - train/lr(1e-3):0.006
+step:23 - train/loss:1.278 - train/lr(1e-3):0.006
+step:24 - train/loss:1.251 - train/lr(1e-3):0.006
+step:25 - train/loss:1.237 - train/lr(1e-3):0.007
+step:26 - train/loss:1.233 - train/lr(1e-3):0.007
+step:27 - train/loss:1.221 - train/lr(1e-3):0.007
+step:28 - train/loss:1.210 - train/lr(1e-3):0.007
+step:29 - train/loss:1.193 - train/lr(1e-3):0.008
+step:30 - train/loss:1.183 - train/lr(1e-3):0.008
+step:31 - train/loss:1.169 - train/lr(1e-3):0.008
+step:32 - train/loss:1.157 - train/lr(1e-3):0.008
+step:33 - train/loss:1.142 - train/lr(1e-3):0.009
+step:34 - train/loss:1.129 - train/lr(1e-3):0.009
+step:35 - train/loss:1.115 - train/lr(1e-3):0.009
+step:36 - train/loss:1.102 - train/lr(1e-3):0.009
+step:37 - train/loss:1.092 - train/lr(1e-3):0.010
+step:38 - train/loss:1.079 - train/lr(1e-3):0.010
+step:39 - train/loss:1.060 - train/lr(1e-3):0.010
+step:40 - train/loss:1.050 - train/lr(1e-3):0.010
+step:41 - train/loss:1.038 - train/lr(1e-3):0.010
+step:42 - train/loss:1.019 - train/lr(1e-3):0.010
+step:43 - train/loss:1.006 - train/lr(1e-3):0.010
+step:44 - train/loss:0.989 - train/lr(1e-3):0.010
+step:45 - train/loss:0.976 - train/lr(1e-3):0.010
+step:46 - train/loss:0.962 - train/lr(1e-3):0.010
+step:47 - train/loss:0.949 - train/lr(1e-3):0.010
+step:48 - train/loss:0.932 - train/lr(1e-3):0.010
+step:49 - train/loss:0.917 - train/lr(1e-3):0.010
+step:50 - train/loss:0.900 - train/lr(1e-3):0.010
+step:51 - train/loss:0.884 - train/lr(1e-3):0.010
+step:52 - train/loss:0.869 - train/lr(1e-3):0.010
+step:53 - train/loss:0.853 - train/lr(1e-3):0.010
+step:54 - train/loss:0.839 - train/lr(1e-3):0.010
+step:55 - train/loss:0.824 - train/lr(1e-3):0.010
+step:56 - train/loss:0.802 - train/lr(1e-3):0.010
+step:57 - train/loss:0.787 - train/lr(1e-3):0.010
+step:58 - train/loss:0.775 - train/lr(1e-3):0.010
+step:59 - train/loss:0.762 - train/lr(1e-3):0.010
+step:60 - train/loss:0.747 - train/lr(1e-3):0.010
+step:61 - train/loss:0.732 - train/lr(1e-3):0.010
+step:62 - train/loss:0.712 - train/lr(1e-3):0.010
+step:63 - train/loss:0.698 - train/lr(1e-3):0.010
+step:64 - train/loss:0.683 - train/lr(1e-3):0.010
+step:65 - train/loss:0.668 - train/lr(1e-3):0.010
+step:66 - train/loss:0.655 - train/lr(1e-3):0.010
+step:67 - train/loss:0.638 - train/lr(1e-3):0.010
+step:68 - train/loss:0.626 - train/lr(1e-3):0.010
+step:69 - train/loss:0.612 - train/lr(1e-3):0.010
+step:70 - train/loss:0.598 - train/lr(1e-3):0.010
+step:71 - train/loss:0.581 - train/lr(1e-3):0.010
+step:72 - train/loss:0.569 - train/lr(1e-3):0.010
+step:73 - train/loss:0.555 - train/lr(1e-3):0.010
+step:74 - train/loss:0.540 - train/lr(1e-3):0.010
+step:75 - train/loss:0.525 - train/lr(1e-3):0.010
+step:76 - train/loss:0.511 - train/lr(1e-3):0.010
+step:77 - train/loss:0.494 - train/lr(1e-3):0.010
+step:78 - train/loss:0.478 - train/lr(1e-3):0.010
+step:79 - train/loss:0.471 - train/lr(1e-3):0.010
+step:80 - train/loss:0.456 - train/lr(1e-3):0.010
+step:81 - train/loss:0.441 - train/lr(1e-3):0.010
+step:82 - train/loss:0.426 - train/lr(1e-3):0.010
+step:83 - train/loss:0.413 - train/lr(1e-3):0.010
+step:84 - train/loss:0.401 - train/lr(1e-3):0.010
+step:85 - train/loss:0.381 - train/lr(1e-3):0.010
+step:86 - train/loss:0.372 - train/lr(1e-3):0.010
+step:87 - train/loss:0.356 - train/lr(1e-3):0.010
+step:88 - train/loss:0.344 - train/lr(1e-3):0.010
+step:89 - train/loss:0.328 - train/lr(1e-3):0.009
+step:90 - train/loss:0.317 - train/lr(1e-3):0.009
+step:91 - train/loss:0.302 - train/lr(1e-3):0.009
+Traceback (most recent call last):
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 396, in <module>
+    main()
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 391, in main
+    trainer.fit()
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 338, in fit
+    metric = self.training_step(data)
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 264, in training_step
+    loss = self._compute_loss(batch=micro_batch) / n_micro_batches
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 221, in _compute_loss
+    output = self.fsdp_model(input_ids=batch['input_ids'],
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 863, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 1165, in forward
+    outputs = self.model(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 864, in forward
+    causal_mask = self._update_causal_mask(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 943, in _update_causal_mask
+    if attention_mask is not None and 0.0 in attention_mask:
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/_tensor.py", line 1112, in __contains__
+    return (element == self).any().item()  # type: ignore[union-attr]
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 396, in <module>
+[rank0]:     main()
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+[rank0]:     _run_hydra(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+[rank0]:     _run_app(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+[rank0]:     run_and_report(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+[rank0]:     return func()
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+[rank0]:     lambda: hydra.run(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+[rank0]:     ret = run_job(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+[rank0]:     ret.return_value = task_function(task_cfg)
+[rank0]:   File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 391, in main
+[rank0]:     trainer.fit()
+[rank0]:   File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 338, in fit
+[rank0]:     metric = self.training_step(data)
+[rank0]:   File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 264, in training_step
+[rank0]:     loss = self._compute_loss(batch=micro_batch) / n_micro_batches
+[rank0]:   File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_mt_trainer.py", line 221, in _compute_loss
+[rank0]:     output = self.fsdp_model(input_ids=batch['input_ids'],
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 863, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 1165, in forward
+[rank0]:     outputs = self.model(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 864, in forward
+[rank0]:     causal_mask = self._update_causal_mask(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/transformers/models/qwen2/modeling_qwen2.py", line 943, in _update_causal_mask
+[rank0]:     if attention_mask is not None and 0.0 in attention_mask:
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/_tensor.py", line 1112, in __contains__
+[rank0]:     return (element == self).any().item()  # type: ignore[union-attr]
+[rank0]: KeyboardInterrupt

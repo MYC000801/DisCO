@@ -1,0 +1,14 @@
+- data.train_files=/projectnb/rlhf/mingyuc/DisCO/datasets/maze/train_new.parquet
+- data.val_files=/projectnb/rlhf/mingyuc/DisCO/datasets/maze/test_new.parquet
+- data.prompt_key=extra_info
+- data.response_key=extra_info
+- +data.prompt_dict_keys=[question]
+- +data.response_dict_keys=[answer]
+- data.micro_batch_size=8
+- model.partial_pretrain=Qwen/Qwen2.5-1.5B
+- trainer.default_local_dir=./exp/qwen_1.5b
+- trainer.project_name=math-sft
+- trainer.experiment_name=maze-sft-qwen-1.5b-it
+- trainer.total_epochs=1
+- trainer.logger=[wandb,console]
+- trainer.default_hdfs_dir=null

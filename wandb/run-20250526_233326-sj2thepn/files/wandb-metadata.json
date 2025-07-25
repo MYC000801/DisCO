@@ -1,0 +1,79 @@
+{
+  "os": "Linux-4.18.0-553.53.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "python": "CPython 3.10.16",
+  "startedAt": "2025-05-27T03:33:26.672008Z",
+  "args": [
+    "--node-ip-address=192.168.21.190",
+    "--node-manager-port=37935",
+    "--object-store-name=/scratch/5684405.1.cds-gpu-long/ray/session_2025-05-26_23-32-49_536114_760137/sockets/plasma_store",
+    "--raylet-name=/scratch/5684405.1.cds-gpu-long/ray/session_2025-05-26_23-32-49_536114_760137/sockets/raylet",
+    "--redis-address=None",
+    "--metrics-agent-port=49582",
+    "--logging-rotate-bytes=536870912",
+    "--logging-rotate-backup-count=5",
+    "--runtime-env-agent-port=53729",
+    "--gcs-address=192.168.21.190:55732",
+    "--session-name=session_2025-05-26_23-32-49_536114_760137",
+    "--temp-dir=/scratch/5684405.1.cds-gpu-long/ray",
+    "--webui=",
+    "--cluster-id=2094bcbbe2a49deb1554240318dacfb64c33907d7f1ea66545656735",
+    "--startup-token=1",
+    "--worker-launch-time-ms=1748316770653",
+    "--node-id=a9529200ba471b79088b7f77b36c170498f436b70434c3ef366ad428",
+    "--runtime-env-hash=0",
+    "--enable-resource-isolation=false"
+  ],
+  "program": "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/ray/_private/workers/default_worker.py",
+  "git": {
+    "remote": "https://github.com/Optimization-AI/DisCO.git",
+    "commit": "bd2b078129347a87c10fbb64df12ed50dce59947"
+  },
+  "email": "mingyuc@bu.edu",
+  "root": "/projectnb/rlhf/mingyuc/DisCO",
+  "host": "scc-j12",
+  "executable": "/projectnb/replearn/mingyu/anaconda/envs/disco/bin/python3",
+  "cpu_count": 32,
+  "cpu_count_logical": 32,
+  "gpu": "NVIDIA L40S",
+  "gpu_count": 4,
+  "disk": {
+    "/": {
+      "total": "20957446144",
+      "used": "15683518464"
+    }
+  },
+  "memory": {
+    "total": "269413908480"
+  },
+  "cpu": {
+    "count": 32,
+    "countLogical": 32
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA L40S",
+      "memoryTotal": "48305799168",
+      "cudaCores": 18176,
+      "architecture": "Ada"
+    },
+    {
+      "name": "NVIDIA L40S",
+      "memoryTotal": "48305799168",
+      "cudaCores": 18176,
+      "architecture": "Ada"
+    },
+    {
+      "name": "NVIDIA L40S",
+      "memoryTotal": "48305799168",
+      "cudaCores": 18176,
+      "architecture": "Ada"
+    },
+    {
+      "name": "NVIDIA L40S",
+      "memoryTotal": "48305799168",
+      "cudaCores": 18176,
+      "architecture": "Ada"
+    }
+  ],
+  "cudaVersion": "12.8"
+}

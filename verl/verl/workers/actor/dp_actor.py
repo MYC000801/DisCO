@@ -236,7 +236,6 @@ class DataParallelPPOActor(BasePPOActor):
                 self.actor_optimizer.zero_grad()
 
                 for data in micro_batches:
-                    print("MICROBATCH STEP")
                     data = data.cuda()  # actor device is cpu when using offload
                     responses = data['responses']
                     response_length = responses.size(1)
@@ -262,7 +261,12 @@ class DataParallelPPOActor(BasePPOActor):
                                                                                     advantages=advantages,
                                                                                     eos_mask=response_mask,
                                                                                     cliprange=clip_ratio)
-
+                    elif self.config.grpo_type == 'dapo':
+                        pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_dapo(old_log_prob=old_log_prob,
+                                                                                    log_prob=log_prob,
+                                                                                    advantages=advantages,
+                                                                                    eos_mask=response_mask,
+                                                                                    cliprange=clip_ratio)
                     elif self.config.grpo_type == 'discob_Lratio':
                         pg_loss, pg_clipfrac, ppo_kl = core_algos.compute_policy_loss_discob_Lratio(old_log_prob=old_log_prob,
                                                                                     log_prob=log_prob,

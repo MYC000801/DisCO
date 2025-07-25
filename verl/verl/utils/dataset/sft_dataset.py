@@ -114,10 +114,18 @@ class SFTDataset(Dataset):
         response = self.responses[item]
 
         # apply chat template
-        prompt_chat = [{'role': 'user', 'content': prompt}]
+        if isinstance(prompt, str):
+            prompt_chat = [{'role': 'user', 'content': prompt}]
+        else:
+            prompt_chat = prompt
 
         # string
         prompt_chat_str = tokenizer.apply_chat_template(prompt_chat, add_generation_prompt=True, tokenize=False)
+        if not isinstance(prompt, str):            
+            prompt_chat_str = prompt_chat_str.replace(
+                "<|im_start|>system\nYou are a helpful assistant.<|im_end|>",
+                "<|im_start|>system\nYou are an intelligent agent navigating a maze.\nAt each step, you receive an observation of four adjacent cells, described by their coordinates and whether they are 'path' or 'wall'.\nYou must choose exactly one adjacent cell that is a valid 'path' or 'exit' and move into it.\nAlways move efficiently toward the goal.\nOutput your next move as a single coordinate in the format (row, col).\nDo not explain or repeat the input — just return the next move.\n<|im_end|>"
+            )
         response_chat_str = response + tokenizer.eos_token
 
         # tokenize

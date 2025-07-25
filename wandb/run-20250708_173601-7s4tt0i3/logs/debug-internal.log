@@ -1,0 +1,7 @@
+{"time":"2025-07-08T17:36:01.735729743-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250708_173601-7s4tt0i3/logs/debug-core.log"}
+{"time":"2025-07-08T17:36:01.934360727-04:00","level":"INFO","msg":"created new stream","id":"7s4tt0i3"}
+{"time":"2025-07-08T17:36:01.934422273-04:00","level":"INFO","msg":"stream: started","id":"7s4tt0i3"}
+{"time":"2025-07-08T17:36:01.934443833-04:00","level":"INFO","msg":"sender: started","stream_id":"7s4tt0i3"}
+{"time":"2025-07-08T17:36:01.934466656-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"7s4tt0i3"}
+{"time":"2025-07-08T17:36:01.934464993-04:00","level":"INFO","msg":"handler: started","stream_id":"7s4tt0i3"}
+{"time":"2025-07-08T17:36:02.168622847-04:00","level":"INFO","msg":"Starting system monitor"}

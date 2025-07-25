@@ -1,0 +1,78 @@
+Using LocalLogger is deprecated. The constructor API will change
+Total training steps: 129
+Traceback (most recent call last):
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 396, in <module>
+    main()
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 392, in main
+    trainer.fit()
+  File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 337, in fit
+    for data in self.train_dataloader:
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1327, in _next_data
+    idx, data = self._get_data()
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1283, in _get_data
+    success, data = self._try_get_data()
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1131, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 396, in <module>
+[rank0]:     main()
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/main.py", line 94, in decorated_main
+[rank0]:     _run_hydra(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+[rank0]:     _run_app(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+[rank0]:     run_and_report(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+[rank0]:     return func()
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+[rank0]:     lambda: hydra.run(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/_internal/hydra.py", line 119, in run
+[rank0]:     ret = run_job(
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/hydra/core/utils.py", line 186, in run_job
+[rank0]:     ret.return_value = task_function(task_cfg)
+[rank0]:   File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 392, in main
+[rank0]:     trainer.fit()
+[rank0]:   File "/projectnb/rlhf/mingyuc/DisCO/verl/verl/trainer/fsdp_sft_trainer.py", line 337, in fit
+[rank0]:     for data in self.train_dataloader:
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1327, in _next_data
+[rank0]:     idx, data = self._get_data()
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1283, in _get_data
+[rank0]:     success, data = self._try_get_data()
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1131, in _try_get_data
+[rank0]:     data = self._data_queue.get(timeout=timeout)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/queue.py", line 180, in get
+[rank0]:     self.not_empty.wait(remaining)
+[rank0]:   File "/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/threading.py", line 324, in wait
+[rank0]:     gotit = waiter.acquire(True, timeout)
+[rank0]: KeyboardInterrupt

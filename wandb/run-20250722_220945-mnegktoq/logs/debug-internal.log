@@ -1,0 +1,6 @@
+{"time":"2025-07-22T22:09:45.393609365-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250722_220945-mnegktoq/logs/debug-core.log"}
+{"time":"2025-07-22T22:09:45.578770877-04:00","level":"INFO","msg":"created new stream","id":"mnegktoq"}
+{"time":"2025-07-22T22:09:45.578798057-04:00","level":"INFO","msg":"stream: started","id":"mnegktoq"}
+{"time":"2025-07-22T22:09:45.578814867-04:00","level":"INFO","msg":"handler: started","stream_id":"mnegktoq"}
+{"time":"2025-07-22T22:09:45.57882863-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"mnegktoq"}
+{"time":"2025-07-22T22:09:45.578828751-04:00","level":"INFO","msg":"sender: started","stream_id":"mnegktoq"}

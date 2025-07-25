@@ -1,0 +1,7 @@
+{"time":"2025-05-26T23:35:43.076599807-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250526_233543-qin5xydz/logs/debug-core.log"}
+{"time":"2025-05-26T23:35:43.256421231-04:00","level":"INFO","msg":"created new stream","id":"qin5xydz"}
+{"time":"2025-05-26T23:35:43.256442582-04:00","level":"INFO","msg":"stream: started","id":"qin5xydz"}
+{"time":"2025-05-26T23:35:43.256452452-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"qin5xydz"}
+{"time":"2025-05-26T23:35:43.256459737-04:00","level":"INFO","msg":"handler: started","stream_id":"qin5xydz"}
+{"time":"2025-05-26T23:35:43.256466787-04:00","level":"INFO","msg":"sender: started","stream_id":"qin5xydz"}
+{"time":"2025-05-26T23:35:43.4530072-04:00","level":"INFO","msg":"Starting system monitor"}

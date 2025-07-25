@@ -155,6 +155,145 @@ def compute_grpo_outcome_advantage(token_level_rewards: torch.Tensor,
     return scores, scores
 
 
+# NOTE(sgm): this implementation only consider outcome supervision, where the reward is a scalar.
+def compute_grpo_outcome_advantage_weight(token_level_rewards: torch.Tensor,
+                                   eos_mask: torch.Tensor,
+                                   old_log_probs: torch.Tensor,
+                                   index: torch.Tensor,
+                                   epsilon: float = 1e-6):
+    """
+    Compute advantage for GRPO, operating only on Outcome reward 
+    (with only one scalar reward for each response).
+    Args:
+        token_level_rewards: `(torch.Tensor)`
+            shape: (bs, response_length)
+        eos_mask: `(torch.Tensor)`
+            shape: (bs, response_length)
+    
+    Returns:
+        advantages: `(torch.Tensor)`
+            shape: (bs, response_length)
+        Returns: `(torch.Tensor)`
+            shape: (bs, response_length)
+    """
+    response_length = token_level_rewards.shape[-1]
+    non_zero_mask = (token_level_rewards != 0)
+    scores = (token_level_rewards * non_zero_mask).sum(dim=-1)
+    logprob = verl_F.masked_mean(old_log_probs, eos_mask, -1)
+
+    weights =  torch.ones_like(scores)
+
+    id2score = defaultdict(list)
+    id2probs = defaultdict(list)
+    id2mean = {}
+    id2std = {}
+    id2logprob = {}
+    id2ids_p = defaultdict(list)
+    id2ids_n = defaultdict(list)
+    id2prob_p = defaultdict(list)
+    id2prob_n = defaultdict(list)
+
+    with torch.no_grad():
+        bsz = scores.shape[0]
+        for i in range(bsz):
+            id2score[index[i]].append(scores[i])
+            id2probs[index[i]].append(logprob[i])
+            if scores[i] > 0:
+                id2prob_p[index[i]].append(logprob[i])
+                id2ids_p[index[i]].append(i)
+            else:
+                id2prob_n[index[i]].append(logprob[i])
+                id2ids_n[index[i]].append(i)
+        for idx in id2score:
+            if len(id2score[idx]) == 1:
+                id2mean[idx] = torch.tensor(0.0)
+                id2std[idx] = torch.tensor(1.0)
+            elif len(id2score[idx]) > 1:
+                id2mean[idx] = torch.mean(torch.tensor(id2score[idx]))
+                id2std[idx] = torch.std(torch.tensor([id2score[idx]]))
+                #id2logprob[idx] = torch.mean(torch.tensor(id2probs[idx]))
+                if len(id2prob_p[idx]) != 0 and len(id2prob_n[idx]) != 0:
+                    target = torch.mean(torch.tensor(id2probs[idx]))
+                    w_n = ridge_l2_closest_to_u(id2prob_n[idx], target)
+                    for i in range(len(id2ids_n[idx])):
+                        weights[id2ids_n[idx][i]] = w_n[i]      
+                    w_p = ridge_l2_closest_to_u(id2prob_p[idx], target)
+                    for i in range(len(id2ids_p[idx])):
+                        weights[id2ids_p[idx][i]] = w_p[i]        
+                    #print(w_n, target, id2prob_n[idx])     
+                #    if min(id2prob_p[idx]) < id2logprob[idx] and id2logprob[idx] < max(id2prob_p[idx]):  
+                #        w_p = l2_closest_to_uniform_from_list(id2prob_p[idx], id2logprob[idx])
+                #        for i in range(len(id2ids_p[idx])):
+                #            weights[id2ids_p[idx][i]] = w_p[i]
+                #    if min(id2prob_n[idx]) < id2logprob[idx] and id2logprob[idx] < max(id2prob_n[idx]):  
+                #        w_n = l2_closest_to_uniform_from_list(id2prob_n[idx], id2logprob[idx])
+                #        for i in range(len(id2ids_n[idx])):
+                #            weights[id2ids_n[idx][i]] = w_n[i]
+            else:
+                raise ValueError(f"no score in prompt index: {idx}")
+        
+        
+        
+        for i in range(bsz):
+            scores[i] = (scores[i] - id2mean[index[i]]) / (id2std[index[i]] + epsilon)
+            scores[i] = scores[i] * weights[i]
+
+        scores = scores.unsqueeze(-1).tile([1, response_length]) * eos_mask
+
+    return scores, scores
+
+
+
+
+
+def ridge_l2_closest_to_u(A_list, B, u=None, beta=0.001):
+    """
+    Solve: min_w (w^T A - B)^2 + beta * ||w - u||^2
+
+    Args:
+        A: (bs,) tensor
+        B: scalar tensor
+        u: (bs,) tensor, target distribution. If None, use uniform.
+        beta: float, regularization coefficient
+
+    Returns:
+        w: (bs,) tensor
+    """
+    A = torch.stack([a.view(-1) for a in A_list]).flatten()
+    B = B.view(()) 
+    bs = A.numel()
+    if u is None:
+        u = torch.ones_like(A) / bs
+
+    ATA = (A * A).sum()
+    ATu = (A * u).sum()
+
+    coeff = (B - ATu) / (ATA + beta)
+    w = u + coeff * A
+
+    w = proj_simplex(w) * len(A_list)
+
+    return w
+
+
+def proj_simplex(v):
+    """
+    投影到概率单纯形
+    Algorithm: Sorting + Thresholding (Wang & Carreira-Perpinan, 2013)
+    """
+    if v.sum() == 1.0 and (v >= 0).all():
+        return v
+    n = v.shape[0]
+    u, _ = torch.sort(v, descending=True)
+    cssv = torch.cumsum(u, dim=0) - 1
+    ind = torch.arange(n, device=v.device) + 1
+    cond = u - cssv / ind > 0
+    rho = ind[cond][-1]
+    theta = cssv[cond][-1] / rho
+    w = torch.clamp(v - theta, min=0)
+    return w
+
+
 
 def compute_rewards(token_level_scores, old_log_prob, ref_log_prob, kl_ratio):
     kl = old_log_prob - ref_log_prob
@@ -231,10 +370,46 @@ def compute_policy_loss_grpo(old_log_prob, log_prob, advantages, eos_mask, clipr
 
     #### average method following the paper
     pg_loss = ((torch.max(pg_losses, pg_losses2)*eos_mask).sum(dim=-1)/eos_mask.sum(dim=-1)).mean()
+    #pg_loss = verl_F.masked_mean(torch.max(pg_losses, pg_losses2), eos_mask)
     pg_clipfrac = verl_F.masked_mean(torch.gt(pg_losses2, pg_losses).float(), eos_mask)
     return pg_loss, pg_clipfrac, ppo_kl
 
+def compute_policy_loss_dapo(old_log_prob, log_prob, advantages, eos_mask, cliprange, kl_type='kl'):
+    """Implementaion exactly follows the paper https://arxiv.org/abs/2402.03300
 
+    Args:
+        old_log_prob: `(torch.Tensor)`
+            shape: (bs, response_length)
+        log_prob: `(torch.Tensor)`
+            shape: (bs, response_length)
+        advantages: `(torch.Tensor)`
+            shape: (bs, response_length)
+        eos_mask: `(torch.Tensor)`
+            shape: (bs, response_length)
+        cliprange: (float)
+            The clip range used in PPO. See https://arxiv.org/abs/1707.06347
+
+    Returns:
+        pg_loss: `a scalar torch.Tensor`
+            policy gradient loss computed via PPO
+        pg_clipfrac: (float)
+            a float number indicating the fraction of policy gradient loss being clipped
+
+    """
+    negative_approx_kl = log_prob - old_log_prob
+    ratio = torch.exp(negative_approx_kl)
+    if kl_type == 'low_var_kl':
+        ppo_kl = verl_F.masked_mean(-negative_approx_kl + ratio - 1, eos_mask)
+    elif kl_type == 'kl':
+        ppo_kl = verl_F.masked_mean(-negative_approx_kl, eos_mask)
+
+    pg_losses = -advantages * ratio
+    pg_losses2 = -advantages * torch.clamp(ratio, 1.0 - cliprange, 1.0 + cliprange + 0.08)
+
+    
+    pg_loss = verl_F.masked_mean(torch.max(pg_losses, pg_losses2), eos_mask)
+    pg_clipfrac = verl_F.masked_mean(torch.gt(pg_losses2, pg_losses).float(), eos_mask)
+    return pg_loss, pg_clipfrac, ppo_kl
 
 
 def compute_policy_loss_discob_Lratio(old_log_prob, log_prob, advantages, eos_mask, uid, seq_level_rewards, delta, beta, kl_type='low_var_kl'):

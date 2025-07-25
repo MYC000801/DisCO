@@ -1,0 +1,7 @@
+{"time":"2025-05-26T23:23:08.04639891-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250526_232308-ps130zxq/logs/debug-core.log"}
+{"time":"2025-05-26T23:23:08.229516251-04:00","level":"INFO","msg":"created new stream","id":"ps130zxq"}
+{"time":"2025-05-26T23:23:08.229537116-04:00","level":"INFO","msg":"stream: started","id":"ps130zxq"}
+{"time":"2025-05-26T23:23:08.22955248-04:00","level":"INFO","msg":"handler: started","stream_id":"ps130zxq"}
+{"time":"2025-05-26T23:23:08.229561545-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"ps130zxq"}
+{"time":"2025-05-26T23:23:08.229554144-04:00","level":"INFO","msg":"sender: started","stream_id":"ps130zxq"}
+{"time":"2025-05-26T23:23:08.350606813-04:00","level":"INFO","msg":"Starting system monitor"}

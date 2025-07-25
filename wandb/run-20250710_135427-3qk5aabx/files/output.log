@@ -1,0 +1,40 @@
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+WARNING:2025-07-10 21:43:38,374:WARNING: Error in configuration: macro '\frac' failed its substitution!
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+WARNING:2025-07-11 02:36:25,265:WARNING: Error in configuration: macro '\frac' failed its substitution!
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/sympy/functions/elementary/miscellaneous.py:152: SymPyDeprecationWarning:
+
+Using non-Expr arguments in Pow is deprecated (in this case, one of the
+arguments is of type 'Tuple').
+
+If you really did intend to construct a power with this base, use the **
+operator instead.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#non-expr-args-deprecated
+for details.
+
+This has been deprecated since SymPy version 1.7. It
+will be removed in a future version of SymPy.
+
+  return Pow(arg, S.Half, evaluate=evaluate)
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+Validation: Generation end.
+WARNING:2025-07-11 10:42:37,382:WARNING: Error in configuration: macro '\frac' failed its substitution!
+Validation: Generation end.
+Validation: Generation end.
+WARNING:2025-07-11 12:26:37,468:WARNING: Error in configuration: macro '\frac' failed its substitution!
+WARNING:2025-07-11 12:26:38,897:WARNING: Error in configuration: macro '\frac' failed its substitution!

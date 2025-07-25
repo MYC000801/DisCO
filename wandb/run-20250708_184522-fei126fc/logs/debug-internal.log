@@ -1,0 +1,12 @@
+{"time":"2025-07-08T18:45:22.58729226-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250708_184522-fei126fc/logs/debug-core.log"}
+{"time":"2025-07-08T18:45:22.792534576-04:00","level":"INFO","msg":"created new stream","id":"fei126fc"}
+{"time":"2025-07-08T18:45:22.792591884-04:00","level":"INFO","msg":"stream: started","id":"fei126fc"}
+{"time":"2025-07-08T18:45:22.792617081-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"fei126fc"}
+{"time":"2025-07-08T18:45:22.792626349-04:00","level":"INFO","msg":"handler: started","stream_id":"fei126fc"}
+{"time":"2025-07-08T18:45:22.792638822-04:00","level":"INFO","msg":"sender: started","stream_id":"fei126fc"}
+{"time":"2025-07-08T18:45:22.930123712-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-08T21:09:08.200333857-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.19.240:44160->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-07-08T21:12:53.196511331-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.19.240:38180->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-07-08T21:40:08.21579332-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.19.240:36214->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-07-09T10:52:24.137642152-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-09T13:15:24.291815358-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}

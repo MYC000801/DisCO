@@ -1,0 +1,17 @@
+{"time":"2025-07-22T02:31:08.730139953-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250722_023108-lf03816z/logs/debug-core.log"}
+{"time":"2025-07-22T02:31:09.051358487-04:00","level":"INFO","msg":"created new stream","id":"lf03816z"}
+{"time":"2025-07-22T02:31:09.051382562-04:00","level":"INFO","msg":"stream: started","id":"lf03816z"}
+{"time":"2025-07-22T02:31:09.051397823-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"lf03816z"}
+{"time":"2025-07-22T02:31:09.051435685-04:00","level":"INFO","msg":"sender: started","stream_id":"lf03816z"}
+{"time":"2025-07-22T02:31:09.05149342-04:00","level":"INFO","msg":"handler: started","stream_id":"lf03816z"}
+{"time":"2025-07-22T02:31:09.216368681-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-22T11:14:41.198643023-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-22T13:13:56.525894724-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-07-22T15:21:48.612603419-04:00","level":"INFO","msg":"stream: closing","id":"lf03816z"}
+{"time":"2025-07-22T15:21:48.612693209-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-22T15:21:48.612943271-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-22T15:21:49.022128466-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-22T15:21:49.175697736-04:00","level":"INFO","msg":"handler: closed","stream_id":"lf03816z"}
+{"time":"2025-07-22T15:21:49.17571521-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"lf03816z"}
+{"time":"2025-07-22T15:21:49.175750421-04:00","level":"INFO","msg":"sender: closed","stream_id":"lf03816z"}
+{"time":"2025-07-22T15:21:49.198858-04:00","level":"INFO","msg":"stream: closed","id":"lf03816z"}

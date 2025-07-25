@@ -1,0 +1,46 @@
+Using LocalLogger is deprecated. The constructor API will change
+Total training steps: 39
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+step:0 - train/loss:2.887 - train/lr(1e-3):0.003
+step:1 - train/loss:2.897 - train/lr(1e-3):0.007
+step:2 - train/loss:2.825 - train/lr(1e-3):0.010
+step:3 - train/loss:2.192 - train/lr(1e-3):0.010
+step:4 - train/loss:1.806 - train/lr(1e-3):0.010
+step:5 - train/loss:1.702 - train/lr(1e-3):0.010
+step:6 - train/loss:1.472 - train/lr(1e-3):0.010
+step:7 - train/loss:1.414 - train/lr(1e-3):0.010
+step:8 - train/loss:1.377 - train/lr(1e-3):0.009
+step:9 - train/loss:1.299 - train/lr(1e-3):0.009
+step:10 - train/loss:1.266 - train/lr(1e-3):0.009
+step:11 - train/loss:1.244 - train/lr(1e-3):0.009
+step:12 - train/loss:1.231 - train/lr(1e-3):0.008
+step:13 - train/loss:1.215 - train/lr(1e-3):0.008
+step:14 - train/loss:1.203 - train/lr(1e-3):0.008
+step:15 - train/loss:1.191 - train/lr(1e-3):0.007
+step:16 - train/loss:1.175 - train/lr(1e-3):0.007
+step:17 - train/loss:1.162 - train/lr(1e-3):0.006
+step:18 - train/loss:1.146 - train/lr(1e-3):0.006
+step:19 - train/loss:1.137 - train/lr(1e-3):0.005
+step:20 - train/loss:1.129 - train/lr(1e-3):0.005
+step:21 - train/loss:1.122 - train/lr(1e-3):0.005
+step:22 - train/loss:1.114 - train/lr(1e-3):0.004
+step:23 - train/loss:1.104 - train/lr(1e-3):0.004
+step:24 - train/loss:1.099 - train/lr(1e-3):0.003
+step:25 - train/loss:1.094 - train/lr(1e-3):0.003
+step:26 - train/loss:1.091 - train/lr(1e-3):0.003
+step:27 - train/loss:1.087 - train/lr(1e-3):0.002
+step:28 - train/loss:1.080 - train/lr(1e-3):0.002
+step:29 - train/loss:1.078 - train/lr(1e-3):0.001
+step:30 - train/loss:1.076 - train/lr(1e-3):0.001
+step:31 - train/loss:1.072 - train/lr(1e-3):0.001
+step:32 - train/loss:1.066 - train/lr(1e-3):0.001
+step:33 - train/loss:1.066 - train/lr(1e-3):0.000
+step:34 - train/loss:1.066 - train/lr(1e-3):0.000
+step:35 - train/loss:1.067 - train/lr(1e-3):0.000
+step:36 - train/loss:1.064 - train/lr(1e-3):0.000
+step:37 - train/loss:1.064 - train/lr(1e-3):0.000
+step:38 - train/loss:1.063 - train/lr(1e-3):0.000
+step:39 - val/loss:1.062
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:689: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(

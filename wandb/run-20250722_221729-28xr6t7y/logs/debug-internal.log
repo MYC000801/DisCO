@@ -1,0 +1,15 @@
+{"time":"2025-07-22T22:17:29.045503863-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250722_221729-28xr6t7y/logs/debug-core.log"}
+{"time":"2025-07-22T22:17:29.237081083-04:00","level":"INFO","msg":"created new stream","id":"28xr6t7y"}
+{"time":"2025-07-22T22:17:29.237102076-04:00","level":"INFO","msg":"stream: started","id":"28xr6t7y"}
+{"time":"2025-07-22T22:17:29.23711849-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"28xr6t7y"}
+{"time":"2025-07-22T22:17:29.237129866-04:00","level":"INFO","msg":"handler: started","stream_id":"28xr6t7y"}
+{"time":"2025-07-22T22:17:29.23719361-04:00","level":"INFO","msg":"sender: started","stream_id":"28xr6t7y"}
+{"time":"2025-07-22T22:17:29.411383191-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-22T22:19:24.531650738-04:00","level":"INFO","msg":"stream: closing","id":"28xr6t7y"}
+{"time":"2025-07-22T22:19:24.531732311-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-22T22:19:24.531817843-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-22T22:19:24.939036123-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-22T22:19:25.069034619-04:00","level":"INFO","msg":"handler: closed","stream_id":"28xr6t7y"}
+{"time":"2025-07-22T22:19:25.069062195-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"28xr6t7y"}
+{"time":"2025-07-22T22:19:25.069103993-04:00","level":"INFO","msg":"sender: closed","stream_id":"28xr6t7y"}
+{"time":"2025-07-22T22:19:25.093936182-04:00","level":"INFO","msg":"stream: closed","id":"28xr6t7y"}

@@ -1,0 +1,7 @@
+{"time":"2025-07-11T13:01:47.627165015-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250711_130147-nyc0ikxl/logs/debug-core.log"}
+{"time":"2025-07-11T13:01:47.823063129-04:00","level":"INFO","msg":"created new stream","id":"nyc0ikxl"}
+{"time":"2025-07-11T13:01:47.823131668-04:00","level":"INFO","msg":"stream: started","id":"nyc0ikxl"}
+{"time":"2025-07-11T13:01:47.823169109-04:00","level":"INFO","msg":"sender: started","stream_id":"nyc0ikxl"}
+{"time":"2025-07-11T13:01:47.823171423-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"nyc0ikxl"}
+{"time":"2025-07-11T13:01:47.823215837-04:00","level":"INFO","msg":"handler: started","stream_id":"nyc0ikxl"}
+{"time":"2025-07-11T13:01:47.990659752-04:00","level":"INFO","msg":"Starting system monitor"}

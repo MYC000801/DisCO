@@ -1,0 +1,15 @@
+{"time":"2025-07-23T00:33:42.243161334-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250723_003342-phlruq41/logs/debug-core.log"}
+{"time":"2025-07-23T00:33:42.432033733-04:00","level":"INFO","msg":"created new stream","id":"phlruq41"}
+{"time":"2025-07-23T00:33:42.43205523-04:00","level":"INFO","msg":"stream: started","id":"phlruq41"}
+{"time":"2025-07-23T00:33:42.432067594-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"phlruq41"}
+{"time":"2025-07-23T00:33:42.432089434-04:00","level":"INFO","msg":"sender: started","stream_id":"phlruq41"}
+{"time":"2025-07-23T00:33:42.432142036-04:00","level":"INFO","msg":"handler: started","stream_id":"phlruq41"}
+{"time":"2025-07-23T00:33:42.558119861-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-23T05:52:34.561961712-04:00","level":"INFO","msg":"stream: closing","id":"phlruq41"}
+{"time":"2025-07-23T05:52:34.56203919-04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-23T05:52:34.562283734-04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-23T05:52:34.952196959-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-23T05:52:35.115969422-04:00","level":"INFO","msg":"handler: closed","stream_id":"phlruq41"}
+{"time":"2025-07-23T05:52:35.115998171-04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"phlruq41"}
+{"time":"2025-07-23T05:52:35.116007734-04:00","level":"INFO","msg":"sender: closed","stream_id":"phlruq41"}
+{"time":"2025-07-23T05:52:35.143968819-04:00","level":"INFO","msg":"stream: closed","id":"phlruq41"}

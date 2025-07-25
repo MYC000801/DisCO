@@ -1,0 +1,9 @@
+{"time":"2025-07-10T13:54:27.14022835-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250710_135427-3qk5aabx/logs/debug-core.log"}
+{"time":"2025-07-10T13:54:27.346738245-04:00","level":"INFO","msg":"created new stream","id":"3qk5aabx"}
+{"time":"2025-07-10T13:54:27.346781277-04:00","level":"INFO","msg":"stream: started","id":"3qk5aabx"}
+{"time":"2025-07-10T13:54:27.346802927-04:00","level":"INFO","msg":"sender: started","stream_id":"3qk5aabx"}
+{"time":"2025-07-10T13:54:27.346817254-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"3qk5aabx"}
+{"time":"2025-07-10T13:54:27.346817905-04:00","level":"INFO","msg":"handler: started","stream_id":"3qk5aabx"}
+{"time":"2025-07-10T13:54:27.499974889-04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-10T17:52:27.882452546-04:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/it-is-reasoning/DisCO/3qk5aabx/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-07-10T19:55:12.933656422-04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}

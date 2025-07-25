@@ -15,8 +15,8 @@ shift 2
 
 torchrun --standalone --nnodes=1 --nproc_per_node=$nproc_per_node \
      -m verl.trainer.fsdp_sft_trainer \
-    data.train_files=$HOME/data/gsm8k/train.parquet \
-    data.val_files=$HOME/data/gsm8k/test.parquet \
+    data.train_files=/projectnb/rlhf/mingyuc/TinyZero/TinyZero_old/data/gsm8k/train.parquet \
+    data.val_files=/projectnb/rlhf/mingyuc/TinyZero/TinyZero_old/data/gsm8k/test.parquet \
     data.prompt_key=extra_info \
     data.response_key=extra_info \
     +data.prompt_dict_keys=['question'] \
@@ -27,5 +27,5 @@ torchrun --standalone --nnodes=1 --nproc_per_node=$nproc_per_node \
     trainer.project_name=gsm8k-sft \
     trainer.experiment_name=gsm8k-sft-gemma-2b-it \
     trainer.total_epochs=2 \
-    trainer.logger=['console','wandb'] \
+    trainer.logger=['console'] \
     trainer.default_hdfs_dir=null $@

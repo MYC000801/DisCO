@@ -1,0 +1,17 @@
+Using LocalLogger is deprecated. The constructor API will change
+Total training steps: 129
+/projectnb/replearn/mingyu/anaconda/envs/disco/lib/python3.10/site-packages/torch/utils/checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+step:0 - train/loss:1.414 - train/lr(1e-3):0.001
+step:1 - train/loss:1.436 - train/lr(1e-3):0.002
+step:2 - train/loss:1.433 - train/lr(1e-3):0.003
+step:3 - train/loss:1.343 - train/lr(1e-3):0.003
+step:4 - train/loss:1.063 - train/lr(1e-3):0.004
+step:5 - train/loss:0.400 - train/lr(1e-3):0.005
+step:6 - train/loss:0.318 - train/lr(1e-3):0.006
+step:7 - train/loss:0.228 - train/lr(1e-3):0.007
+step:8 - train/loss:0.202 - train/lr(1e-3):0.008
+step:9 - train/loss:0.177 - train/lr(1e-3):0.008
+step:10 - train/loss:0.141 - train/lr(1e-3):0.009
+step:11 - train/loss:0.095 - train/lr(1e-3):0.010
+step:12 - train/loss:0.093 - train/lr(1e-3):0.010

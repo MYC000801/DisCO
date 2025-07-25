@@ -1,0 +1,7 @@
+{"time":"2025-05-26T23:40:03.167606056-04:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/projectnb/rlhf/mingyuc/DisCO/wandb/run-20250526_234003-pojn411i/logs/debug-core.log"}
+{"time":"2025-05-26T23:40:03.347008708-04:00","level":"INFO","msg":"created new stream","id":"pojn411i"}
+{"time":"2025-05-26T23:40:03.347036739-04:00","level":"INFO","msg":"stream: started","id":"pojn411i"}
+{"time":"2025-05-26T23:40:03.34705288-04:00","level":"INFO","msg":"sender: started","stream_id":"pojn411i"}
+{"time":"2025-05-26T23:40:03.347052568-04:00","level":"INFO","msg":"writer: Do: started","stream_id":"pojn411i"}
+{"time":"2025-05-26T23:40:03.347068527-04:00","level":"INFO","msg":"handler: started","stream_id":"pojn411i"}
+{"time":"2025-05-26T23:40:03.561909563-04:00","level":"INFO","msg":"Starting system monitor"}
