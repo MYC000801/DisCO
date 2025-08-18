@@ -82,8 +82,9 @@ def main():
     )
 
     # Create train and test datasets
-    train_data = conversations[:2]  # First 2 conversations for training
-    test_data = conversations[2:]  # Last conversation for testing
+    train_data = conversations[:2] # First 2 conversations for training
+    test_data = conversations[2:] # Last conversation for testing
+
 
     # Create output directory
     local_dir = os.path.expanduser(args.local_dir)

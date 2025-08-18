@@ -819,7 +819,11 @@ class SGLangRollout(BaseRollout):
                 content = output["text"]
                 finish_reason_type = FinishReasonTypeEnum.from_str(output["meta_info"]["finish_reason"]["type"])
                 current_turns += 1
-                if finish_reason_type == FinishReasonTypeEnum.LENGTH:
+                #print("---xxx---", current_turns, content, flush=True)
+                # Since our LLM does not know how to end, so we need to force stop it when reaching max turns
+                if False:
+                    print("---xxx---", current_turns, content, flush=True)
+                    #print(output["meta_info"]["finish_reason"]["type"], flush=True)
                     _req.add_assistant_message(self.processing_class, content)
                     break
                 else:
@@ -873,6 +877,7 @@ class SGLangRollout(BaseRollout):
                 should_terminate_sequence, content, reward, metrics = await self.interaction.generate_response(_req.request_id, messages, **_req.interaction_kwargs)
                 user_turn_rewards.append(reward)
                 if should_terminate_sequence:
+                    _req.add_user_message(self.processing_class, content)
                     finish_reason_type = FinishReasonTypeEnum.STOP
                     _req.state = AsyncRolloutRequestStateEnum.COMPLETED
                     break
@@ -907,6 +912,8 @@ class SGLangRollout(BaseRollout):
     async def _handle_engine_call(self, _req: AsyncRolloutRequest, sampling_params: dict, image_data: Optional[list[Any]] = None) -> dict:
         generation_prompt_ids = _req.get_generation_prompt_ids(self.processing_class)
         max_new_tokens = min(self.config.response_length, self.config.max_model_len - len(generation_prompt_ids) - 1)
+        # ensure max_new_tokens can be controled by config
+        max_new_tokens = min(max_new_tokens, self.config.max_new_tokens)  
         kwargs = sampling_params.copy()
         kwargs["max_new_tokens"] = max_new_tokens
         kwargs["n"] = 1  # group size is supported in preprocess

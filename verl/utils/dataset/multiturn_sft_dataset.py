@@ -155,6 +155,15 @@ class MultiTurnSFTDataset(Dataset):
             enable_thinking=enable_thinking,
             tools=tools,
         )
+
+        #print(cur_applied_text)
+        '''
+        cur_applied_text = cur_applied_text.replace(
+            "<|im_start|>system\\nYou are a helpful assistant.<|im_end|>",
+            "<|im_start|>system\\nYou are an intelligent agent navigating a maze across multiple attempts.\\nAt each step, you receive an observation with trajectory ID and four adjacent cells (coordinates + 'path'/'wall'/'exit').\\nLearn from previous trajectories to navigate more efficiently.\\nChoose exactly one adjacent 'path' or 'exit' cell to move into.\\nOutput your next move as coordinates (row, col) only.\\n<|im_end|>"
+        )
+        '''
+        
         # Get tokens for the current message only
         if is_assistant:
             generation_prompt_text = prev_applied_text_w_generation_prompt[len(prev_applied_text) :]
@@ -167,7 +176,8 @@ class MultiTurnSFTDataset(Dataset):
                 add_special_tokens=False,
             )
             message_tokens = generation_prompt_tokens + _message_tokens
-            loss_mask = [0] * (len(generation_prompt_tokens)) + [1] * (len(message_tokens) - len(generation_prompt_tokens))
+            # Mingyu:  add a bias for the generation prompt
+            loss_mask = [0] * (len(generation_prompt_tokens) - 1) + [1] * (len(message_tokens) - len(generation_prompt_tokens)) + [0]
         else:
             message_tokens = self.tokenizer.encode(
                 cur_applied_text[len(prev_applied_text) :],
@@ -276,6 +286,8 @@ class MultiTurnSFTDataset(Dataset):
                 i += 1
             else:
                 raise ValueError(f"Unknown role: {cur_messages['role']}")
+        
+        #print(messages)
 
         # Validate and convert tokens
         input_ids, loss_mask, attention_mask = self._validate_and_convert_tokens(full_tokens[0], concat_tokens, concat_loss_mask, concat_attention_mask)

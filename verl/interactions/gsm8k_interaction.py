@@ -54,7 +54,7 @@ class Gsm8kInteraction(BaseInteraction):
         content = ""
         for i in range(len(messages) - 1, -1, -1):
             item = messages[i]
-            if item.get("role") == "user":
+            if item.get("role") == "assistant":
                 content = item.get("content")
                 break
 
@@ -65,12 +65,15 @@ class Gsm8kInteraction(BaseInteraction):
 
         reward = await self.calculate_score(instance_id)
         if reward == 1.0:
+            #print(self._instance_dict[instance_id]["response"])
             response = "Your response is correct!"
             should_terminate_sequence = True
         else:
             response = "Your response is incorrect! You need to reflect on your answer and try again."
             should_terminate_sequence = False
 
+
+        #print("---xxx---", response, should_terminate_sequence, flush=True)
         return should_terminate_sequence, response, reward, {}
 
     async def calculate_score(self, instance_id: str, **kwargs) -> float:

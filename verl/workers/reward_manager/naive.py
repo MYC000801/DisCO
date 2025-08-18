@@ -49,6 +49,8 @@ class NaiveRewardManager:
                 return {"reward_tensor": data.batch["rm_scores"]}
             else:
                 return data.batch["rm_scores"]
+            
+
 
         reward_tensor = torch.zeros_like(data.batch["responses"], dtype=torch.float32)
         reward_extra_info = defaultdict(list)
@@ -84,6 +86,11 @@ class NaiveRewardManager:
                 extra_info=extra_info,
             )
 
+            if "reward_scores" in data_item.non_tensor_batch.keys():
+                score = sum(data_item.non_tensor_batch["reward_scores"]["user_turn_rewards"])
+                #score = score - valid_response_length * 0.0001
+                score = torch.tensor(score, dtype=torch.float32)
+
             if isinstance(score, dict):
                 reward = score["score"]
                 # Store the information including original reward
@@ -97,7 +104,7 @@ class NaiveRewardManager:
             if data_source not in already_print_data_sources:
                 already_print_data_sources[data_source] = 0
 
-            if already_print_data_sources[data_source] < self.num_examine:
+            if already_print_data_sources[data_source] < 0:
                 already_print_data_sources[data_source] += 1
                 print("[prompt]", prompt_str)
                 print("[response]", response_str)

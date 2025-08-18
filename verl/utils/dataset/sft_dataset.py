@@ -123,7 +123,10 @@ class SFTDataset(Dataset):
         response = self.responses[item]
 
         # apply chat template
-        prompt_chat = [{"role": "user", "content": prompt}]
+        if isinstance(prompt, str):
+            prompt_chat = [{'role': 'user', 'content': prompt}]
+        else:
+            prompt_chat = prompt
 
         # string
         prompt_chat_str = tokenizer.apply_chat_template(prompt_chat, add_generation_prompt=True, tokenize=False)

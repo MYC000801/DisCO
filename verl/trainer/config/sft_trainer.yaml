@@ -1,5 +1,5 @@
 data:
-  train_batch_size: 256
+  train_batch_size: 128
   micro_batch_size: null # will be deprecated, use micro_batch_size_per_gpu
   micro_batch_size_per_gpu: 4  # this is also val batch size
   train_files: ~/data/gsm8k/train.parquet
@@ -63,5 +63,5 @@ trainer:
   save_freq: -1
   test_freq: -1
   nnodes: 1
-  n_gpus_per_node: 8
+  n_gpus_per_node: 4
   max_ckpt_to_keep: null # TODO
