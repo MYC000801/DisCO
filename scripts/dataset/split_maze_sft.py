@@ -26,7 +26,7 @@ import pandas as pd
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--local_dir", default="./data/multiturn")
-    parser.add_argument("--file_path", default="./projectnb/rlhf/mingyuc/verl_github/verl/data/maze_mt/train100000.parquet")
+    parser.add_argument("--file_path", default="/projectnb/rlhf/mingyuc/verl_github/verl/data/maze_mt/train100000.parquet")
     parser.add_argument("--hdfs_dir", default=None)
     args = parser.parse_args()
     df_mt = pd.read_parquet(args.file_path)

@@ -16,15 +16,15 @@ torchrun --nnodes=1 --nproc_per_node=$nproc_per_node \
      -m verl.trainer.fsdp_sft_trainer \
     data.train_files=./data/multiturn/train.parquet \
     data.val_files=./data/multiturn/test.parquet \
-    data.max_length=5000 \
+    data.max_length=8000 \
     data.multiturn.enable=true \
     data.multiturn.messages_key=messages \
     data.multiturn.enable_thinking_key=false \
     data.micro_batch_size=2 \
-    model.partial_pretrain=Qwen/Qwen2.5-1.5B \
+    model.partial_pretrain=Qwen/Qwen2.5-7B \
     trainer.default_local_dir=$save_path \
     trainer.project_name=multiturn-sft \
-    trainer.experiment_name=multiturn-sft-qwen-2.5-1.5b-maze \
+    trainer.experiment_name=multiturn-sft-qwen-2.5-7b-maze \
     trainer.logger=['console','wandb'] \
     trainer.total_epochs=1 \
     trainer.default_hdfs_dir=null $@ \
