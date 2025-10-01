@@ -19,7 +19,7 @@ import os
 from typing import Any, Dict, List, Optional, Tuple
 from uuid import uuid4
 
-from verl.utils.reward_score import gsm8k
+from verl.utils.reward_score import math
 
 from .base import BaseInteraction
 
@@ -27,8 +27,8 @@ logger = logging.getLogger(__name__)
 logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
-class Gsm8kInteraction(BaseInteraction):
-    """A demo interaction for calculating the reward of gsm8k.
+class MathInteraction(BaseInteraction):
+    """A demo interaction for calculating the reward of math.
 
     - `start_interaction`: start a interaction instance for a trajectory.
     - `generate_response`: generate the response of the user.
@@ -57,11 +57,8 @@ class Gsm8kInteraction(BaseInteraction):
             if item.get("role") == "assistant":
                 content = item.get("content")
                 break
-            
 
         self._instance_dict[instance_id]["response"] = content
-        #print("Debug: last assistant content =", content, "assistant message number = ", sum([1 for item in messages if item.get("role") == "assistant"]), flush=True)
-
 
         reward = await self.calculate_score(instance_id)
         if reward == 1.0:
@@ -74,7 +71,7 @@ class Gsm8kInteraction(BaseInteraction):
         return should_terminate_sequence, response, reward, {}
 
     async def calculate_score(self, instance_id: str, **kwargs) -> float:
-        return gsm8k.compute_score(
+        return math.compute_score(
             self._instance_dict[instance_id]["response"],
             self._instance_dict[instance_id]["ground_truth"],
             method="strict",

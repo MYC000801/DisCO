@@ -981,6 +981,7 @@ class RayPPOTrainer:
                     with marked_timer("gen", timing_raw, color="red"):
                         if not self.async_rollout_mode:
                             gen_batch_output = self.actor_rollout_wg.generate_sequences(gen_batch)
+                            #print(gen_batch_output.batch.keys())
                         else:
                             self.async_rollout_manager.wake_up()
                             gen_batch_output = self.async_rollout_manager.generate_sequences(gen_batch)
@@ -1135,7 +1136,7 @@ class RayPPOTrainer:
                     rollout_data_dir = self.config.trainer.get("rollout_data_dir", None)
                     if rollout_data_dir:
                         with marked_timer("dump_rollout_generations", timing_raw, color="green"):
-                            print(batch.batch.keys())
+                            #print(batch.batch.keys())
                             inputs = self.tokenizer.batch_decode(batch.batch["prompts"], skip_special_tokens=True)
                             outputs = self.tokenizer.batch_decode(batch.batch["responses"], skip_special_tokens=True)
                             scores = batch.batch["token_level_scores"].sum(-1).cpu().tolist()
